@@ -1,7 +1,16 @@
 #include<iostream>
 
 using namespace std;
-
+int c;
+int adiff(int x,int y){
+if(x > y){
+c = (x-y)%360;}
+else{
+c = (y-x)%360;}
+if(c%360 > 180){
+c = 360 - c;}
+return c;
+}
 
 int main(){
   cout << adiff(180,270);
